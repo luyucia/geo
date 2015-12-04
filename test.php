@@ -28,6 +28,13 @@ echo "\n";
 
 $start = microtime(true);
 for ($i=0; $i < 100000; $i++) {
+    geo_distance(37.20251980382515,122.0664687799119,37.20253417575888,122.0664418307466);
+}
+echo microtime(true) - $start;
+echo "\n";
+
+$start = microtime(true);
+for ($i=0; $i < 100000; $i++) {
     geo_simple_distance(37.20251980382515,122.0664687799119,37.20253417575888,122.0664418307466);
 }
 echo microtime(true) - $start;
