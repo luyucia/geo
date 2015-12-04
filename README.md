@@ -29,7 +29,7 @@ geohash decode
 
 
 ### Introduce myself
-I am a Chinese,and I have been at tencent company worked.
+I am a Chinese,and I have been at t com worked.
 
 
 Thank you for your attention!
