@@ -1,6 +1,7 @@
 ## geo
 
-geo is an extension for php.that can help you calculate the distance and encode longitude and latitude to geohash
+geo is an extension for php.that can help you calculate the distance and encode longitude and latitude to geohash.
+
 
 # distance
 calculate the distance
@@ -26,4 +27,9 @@ geohahs decode
   var_dump(geo_geohash_decode('wwwg9sw06uk4u6un4mv9'));
 ```
 
-Thank you for attention!
+
+### Introduce myself
+I am a Chinese,and I have been at tencent company worked.
+
+
+Thank you for your attention!
