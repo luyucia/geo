@@ -3,6 +3,14 @@
 geo is an extension for php.that can help you calculate the distance and encode longitude and latitude to geohash.
 
 
+#install
+phpize
+./configure
+make && make install
+
+find your php.ini ,php.ini depends on your php.ini location
+echo "extension=geo.so" >> php.ini
+
 # distance
 calculate the distance
 ```php
