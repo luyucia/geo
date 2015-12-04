@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("geo", "for geo support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("geo", "enable geo support", "no");
+
+if (PHP_GEO != "no") {
+	EXTENSION("geo", "geo.c");
+}
+
