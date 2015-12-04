@@ -15,14 +15,14 @@ calculate the distance but it faster then geo_distance and lower percision
   echo geo_simple_distance(37.20251980382515,122.0664687799119,37.20253417575888,122.0664418307466);
 ```
 
-# geohahs encode
-geohahs encode
+# geohash encode
+geohash encode
 ```php
   echo geo_geohash_encode(122.0664687799119,37.20251980382515,20);
 ```
 
-# geohahs decode
-geohahs decode
+# geohash decode
+geohash decode
 ```php
   var_dump(geo_geohash_decode('wwwg9sw06uk4u6un4mv9'));
 ```
