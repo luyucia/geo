@@ -40,6 +40,6 @@ for ($i=0; $i < 100000; $i++) {
 echo microtime(true) - $start;
 
 echo "\n";
-echo geo_geohash_encode(122.0664687799119,37.20251980382515,20);
+echo geo_geohash_encode(122.0664687799119,37.20251980382515,9);
 var_dump(geo_geohash_decode('wwwg9sw06uk4u6un4mv9'));
 ?>

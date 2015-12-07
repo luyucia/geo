@@ -111,12 +111,27 @@ PHP_FUNCTION(geo_geohash_encode)
 	int argc = ZEND_NUM_ARGS();
 	double longitude;
 	double latitude;
-    long percision;
+    long precision = 12;
     char * result;
 
-	if (zend_parse_parameters(argc TSRMLS_CC, "ddl", &longitude, &latitude , &percision) == FAILURE)
+	if (zend_parse_parameters(argc TSRMLS_CC, "ddl", &longitude, &latitude , &precision) == FAILURE)
 		return;
-    RETVAL_STRING(geohash_encode(latitude,longitude,percision),1);
+
+    if(latitude>90.0 || latitude<-90.0){
+        php_error_docref(NULL TSRMLS_CC, E_WARNING, "latitude range from -90.0 to 90.0");
+        return;
+    }
+    if(longitude>180.0 || longitude<-180.0){
+        php_error_docref(NULL TSRMLS_CC, E_WARNING, "longitude range from -180.0 to 180.0");
+        return;
+    }
+    if(precision<=0){
+        php_error_docref(NULL TSRMLS_CC, E_WARNING, "precision should be a positive number");
+        return;
+    }
+
+
+    RETVAL_STRING(geohash_encode(latitude,longitude,precision),1);
 	// php_error(E_WARNING, "geo_geohash_encode: not yet implemented");
 }
 /* }}} */
